@@ -1,0 +1,28 @@
+{
+  "manifest_version": 2,
+  "name": "O2O Live",
+  "description": "All the elements in a trade show combined with lighting speed, real-time video and audio communication, and data sharing technology",
+  "version": "0.0.2",
+  "minimum_chrome_version": "34",
+  "icons": {
+    "16": "16.png",
+    "48": "48.png",
+    "128": "128.png"
+  },
+  "background": {
+        "scripts": [ "background.js" ],
+        "persistent": true
+  },
+  "permissions": [
+      "desktopCapture", "contentSettings", "webNavigation", "tabs"
+  ],
+  "externally_connectable": {
+      "matches": [
+          "*://live.o2oevents.com/*"
+      ]
+  },
+  "browser_action": {
+    "default_title": "Create O2O Live Meeting",
+    "default_popup": "popup.html"
+  }
+}
